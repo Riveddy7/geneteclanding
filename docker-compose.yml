@@ -1,0 +1,13 @@
+services:
+  geneteclanding:
+    build: .
+    container_name: geneteclanding
+    restart: always
+    ports:
+      - "3030:3000"
+    networks:
+      - nginx_default
+
+networks:
+  nginx_default:
+    external: true
